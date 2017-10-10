@@ -1,0 +1,58 @@
+﻿@using Football.Web.Models
+@model LeaguesModel
+@{
+    ViewBag.Title = "Choose League";
+}
+
+<div class="dropdown pull-right">
+    <select id="selectLeague" class="leagues">
+        @foreach (var item in Model.LeagueTypes)
+        {
+            <option id="@item.LeagueTypeId">@item.Name</option>
+        }
+    </select>
+</div>
+
+<h2 class="matches title">@ViewBag.Title</h2>
+
+<input type="button" id="StartLeagueBtn" class="btn pull-right" value="Start League">
+
+<h3>@ViewBag.Message</h3>
+
+<h4 class="history-table"> History </h4>
+
+<div class="table-content scrollBar">
+    <div class="row">
+        <table class="table table-bordered">
+            <thread>
+                <tr>
+                    <th>League Name</th>
+                    <th>Start Date</th>
+                    <th>Status</th>
+                    <th>Champion</th>
+                </tr>
+            </thread>
+
+            @foreach (var item in Model.Leagues)
+            {
+                <tr>
+                    <td class="col-md-3">
+                        @Html.DisplayFor(m => item.LeagueTypeName)
+                    </td>
+                    <td class="col-md-1">
+                        @Html.DisplayFor(m => item.StartDate)
+                    </td>
+                    <td class="col-md-1">
+                        @Html.DisplayFor(m => item.Status)
+                    </td>
+                    <td class="col-md-3">
+                        @Html.DisplayFor(m => item.Champion)
+                    </td>
+                    <td class="col-md-3">
+                        @Html.ActionLink("Go to matches", "Matches", "Home", new { leagueId = item.LeagueId }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

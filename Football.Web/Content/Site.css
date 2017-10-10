@@ -1,0 +1,405 @@
+﻿html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 20px;
+    margin: 20px auto 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+    .navbar-inverse .navbar-nav > li > a:focus,
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #ff9e08;
+    }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.leagues-bg {
+    background-color: #000;
+    background-image: url(../Images/soccer-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.panel-generator {
+    background: rgba(70, 84, 22,0.3);
+    color: #fff;
+}
+
+    .panel-generator .jumbotron {
+        text-align: center;
+        background-color: transparent;
+    }
+
+    .panel-generator .panel-grid { /*numai daca se afla in panel generator o sa ia chestiile astea .row { margin: 0 -15px; }*/
+        padding: 0 15px 0 15px;
+    }
+
+.ball {
+    font-size: 60px;
+    color: #0e3303;
+}
+
+.border-f {
+    border: none;
+    color: #ffffff;
+}
+
+.matches {
+    color: #ffffff;
+}
+
+.navigation-bar {
+    background-color: #091502;
+    border-color: #091502;
+}
+
+.hrr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #6c7d2d;
+}
+
+.navbar-inv {
+    background-color: #17190b;
+    border-color: transparent;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.btn-danger.active, .btn-danger:active,
+.open > .dropdown-toggle.btn-danger {
+    background: #ffffff;
+    color: #000000;
+}
+
+    .btn-danger.active.focus,
+    .btn-danger.active:focus,
+    .btn-danger.active:hover,
+    .btn-danger:active.focus,
+    .btn-danger:active:focus,
+    .btn-danger:active:hover,
+    .open > .dropdown-toggle.btn-danger.focus,
+    .open > .dropdown-toggle.btn-danger:focus,
+    .open > .dropdown-toggle.btn-danger:hover {
+        color: #000000;
+        background-color: #ffffff;
+        border-color: #761c19;
+    }
+
+.transp {
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: rgba(70, 84, 22,0.3);
+}
+
+footer {
+    color: #ffffff;
+}
+
+.display-teams {
+    /*   background:rgba(70, 84, 22,0.3);  asta ii ca sa am in spate backgroundul ala asa transparent */
+    color: #ffffff;
+}
+
+.title {
+    color: #e08800;
+    margin-top: 0;
+}
+
+.table-content {
+    padding: 15px;
+}
+
+
+/* div, a, span { toate chestiile care is in toate 3
+color: aqua;
+}*/
+
+.tab-pane .transp {
+    min-height: 400px;
+    padding: 40px 20px;
+}
+
+.display-leagues {
+    color: #ffffff;
+}
+/*de ce nu pot sa folosesc clasa display teams? la nav tabs si tab panes????*/
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #555;
+    cursor: default;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-color: transparent;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #171b04;
+}
+
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+        color: #ec8d28;
+        cursor: default;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        border-color: transparent;
+    }
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #800000;
+    background-color: #fff;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: transparent;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:focus, a:hover {
+    color: #c79a13;
+    text-decoration: underline;
+}
+
+.table > tbody > tr > td {
+    color: white;
+}
+
+.table > thead > tr > th {
+    color: white;
+}
+
+.table > caption {
+    color: red;
+}
+
+
+/*final*/
+.fix-top {
+    margin-top: 100px;
+}
+
+.table-bordered {
+    background: rgba(92, 136, 23, 0.5);
+    border-color: #fff;
+    color: #fff;
+}
+
+    .table-bordered > tbody > tr > td,
+    .table-bordered > tbody > tr > th,
+    .table-bordered > tfoot > tr > td,
+    .table-bordered > tfoot > tr > th,
+    .table-bordered > thead > tr > td,
+    .table-bordered > thead > tr > th {
+        border-color: #fff;
+    }
+
+.btn-default:hover,
+.btn-default.focus,
+.btn-default:focus {
+    color: #fff;
+    background-color: #435421;
+    border-color: transparent;
+}
+
+.btn-default {
+    color: #f15858;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    .btn-default.active.focus,
+    .btn-default.active:focus,
+    .btn-default.active:hover,
+    .btn-default:active.focus,
+    .btn-default:active:focus,
+    .btn-default:active:hover,
+    .open > .dropdown-toggle.btn-default.focus,
+    .open > .dropdown-toggle.btn-default:focus,
+    .open > .dropdown-toggle.btn-default:hover {
+        color: #fff;
+        background-color: #435421;
+        border-color: transparent;
+    }
+
+    .btn-default.active, .btn-default:active,
+    .open > .dropdown-toggle.btn-default {
+        color: #f15858;
+        background-color: rgba(112, 132, 37, 0.6);
+        border-color: transparent;
+    }
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+    color: #ff9e08;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #e08800;
+}
+
+.dropdown-menu > li > a {
+    color: #fff;
+    background-color: #435421;
+    background: rgba(112, 132, 39, 0.9);
+}
+
+    .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: rgba(112, 132, 37, 0.6);
+    }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.history-table {
+    background-color: transparent;
+    color: #f15858;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #f15858;
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #e44c4c;
+    background-color: black;
+}
+
+.leagues {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    color: #e44c4c;
+    background-color: black;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #e44c4c;
+}
+
+a {
+    color: #ff5555;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #f1d06f;
+    text-decoration: underline;
+}
+
+.scrollBar {  
+    max-height: 500px;
+    max-width: 10000px;
+    overflow: auto;
+    float: left;
+}
+
+.table > caption {
+    color: #b34545;
+}

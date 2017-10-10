@@ -1,0 +1,97 @@
+﻿@using Football.Business
+@{
+    ViewBag.Title = "Matches and standings";
+}
+@model League
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (var group in Model.Matches.GroupBy(m => m.Round).ToList())
+            {
+                <table id="matches" class="table table-bordered">
+                    <caption>Round @group.First().Round</caption>
+
+                   @foreach (var item in group.ToList())
+                    {
+                        <tr>
+                            <td class="col-md-3">
+                                @Html.DisplayFor(m => item.Home.Name)
+                            </td>
+                            <td class="col-md-1">
+                                @Html.DisplayFor(m => item.HomeGoals)
+                            </td>
+                            <td class="col-md-1">
+                                @Html.DisplayFor(m => item.GuestGoals)
+                            </td>
+                            <td class="col-md-3">
+                                @Html.DisplayFor(m => item.Guest.Name)
+                            </td>
+                        </tr>
+                    }
+                </table>
+                if (Model.NextAvailableRound == group.First().Round)
+                {
+                    <button type="button" id="playRound" data-id= @Model.LeagueId class="btn btn-default">Play round @group.First().Round</button>
+                }
+                @*<button type="button" id="viewScores" class="btn btn-default">View Scores</button>*@
+            }
+        </div>
+        <div class="col-md-4">
+            <div data-spy="affix" data-offset-top="60">
+                <table class="table table-bordered">
+                    <caption>Standings</caption>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>GP</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>GF</th>
+                            <th>GA</th>
+                            <th>GD</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    @for (var i = 0; i < Model.Standings.Count; i++)
+                {
+                        <tr>
+                            <td>
+                                @(i + 1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].GamesPlayed)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].Wins)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].Draws)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].Losses)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].GoalsFor)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].GoalsAgainst)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].GoalDifference)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => Model.Standings[i].Points)
+                            </td>
+                        </tr>
+                }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
